@@ -14,3 +14,5 @@ some of the folders created such as in src
 *models conatins the schema and structure 
 *routes all the routing stuff
 *utils utiliety : file upload is utility which you will require at many places such as profile photo ....etc  can be said funcnalities used at amy places can be put under utlis
+
+intalled pretteir for better visbilty and not for the conflicts with some changes and folder to be done manully (to be done with prettier {prettier.rc : a overall configuration for the team to maitain code structure and pretteier.ignore for not touch these files with your syntaxial issue})

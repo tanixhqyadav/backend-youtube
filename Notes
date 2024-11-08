@@ -1,3 +1,4 @@
+06
 Project Setup : Youtube Backend + FrontEnd
 Data Model Diagram for : https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj
 Models are decided on future scope 
@@ -16,3 +17,14 @@ some of the folders created such as in src
 *utils utiliety : file upload is utility which you will require at many places such as profile photo ....etc  can be said funcnalities used at amy places can be put under utlis
 
 intalled pretteir for better visbilty and not for the conflicts with some changes and folder to be done manully (to be done with prettier {prettier.rc : a overall configuration for the team to maitain code structure and pretteier.ignore for not touch these files with your syntaxial issue})
+
+07
+DataBase Connection
+using mongodb atlas here they provide a sub-service where they provide online database
+Database connection can be done using two ways  
+put it in the index file and then add funcantities to connect 
+or put the connetivity code in other foler and then import it to index to make teh code clean and organised
+Requiring to pacakges dotenv beacuse of env variables connection and mongooes express
+database ke liye 2 things to keep in mind
+1> its imp to keep things in try and catch or else promises when ever talking with database
+2> database is always in another continent so use which require time and for this we should use asynac and  await  

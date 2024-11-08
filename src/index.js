@@ -2,7 +2,7 @@
 
 import dotenv from "dotenv"
 import connectDB from "./db/index.js";
-// import {app} from './app.js'
+import {app} from './app.js'
 // ! improved version
 dotenv.config({
     path: './.env'
@@ -10,14 +10,15 @@ dotenv.config({
 // ! in dev we are also changing to "nodemon -r dotenv/config --experimental-json-modules src/index.js" sue to these new 
 // ! funcanalities of .config is still not avaialbe in express
 connectDB()
-// .then(() => {
-//     app.listen(process.env.PORT || 8000, () => {
-//         console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
-//     })
-// })
-// .catch((err) => {
-//     console.log("MONGO db connection failed !!! ", err);
-// })
+.then(() => {
+    // !starting the server 
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
+    })
+})
+.catch((err) => {
+    console.log("MONGO db connection failed !!! ", err);
+})
 
 // ! for immediate function invoke we use the concept of ify in js ()() and ; this semicolon is for cleaning purpose
 // *database ke liye 2 things to keep in mind

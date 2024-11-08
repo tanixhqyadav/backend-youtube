@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+const app=express()
 
 app.use(cors({
     origin:process.env.CORS_ORIGIN,
@@ -16,5 +17,4 @@ app.use(cookieParser())
 
 // !Cookie parse kaam hai jo server se user ka browser hai usme cookie ko acess bhi kr paye or set bhi kr paye  basically can 
 //! perform CRUD opertaion 
-const app=express()
 export {app}

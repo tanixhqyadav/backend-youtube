@@ -80,4 +80,5 @@ app.get('/', (req, res) => {
 
 Now for standarding error  node js provides a class error so we are overriding eror and controls in utils to handle all the error 
 in a standard way with status code, message etc....
+same done for Api response
 

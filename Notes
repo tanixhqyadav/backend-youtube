@@ -7,3 +7,10 @@ i have genrated a gitignore file via https://mrkandreev.name/snippets/gitignore-
 
 dev dependicies  tThese are packages needed only for development purposes, such as testing, transpiling, or linting installed nodemon 
 dependicies : These are the core packages your project needs to run in production. 
+some of the folders created such as in src
+*controllers this folder will have funcanilities
+*db database connectivity code and othe stuff
+*middleware code which you need to run in between request and response cycle for confriguation 
+*models conatins the schema and structure 
+*routes all the routing stuff
+*utils utiliety : file upload is utility which you will require at many places such as profile photo ....etc  can be said funcnalities used at amy places can be put under utlis

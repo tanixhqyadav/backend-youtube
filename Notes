@@ -1,3 +1,9 @@
 Project Setup : Youtube Backend + FrontEnd
 Data Model Diagram for : https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj
 Models are decided on future scope 
+setting up my project with github for further better with .gitkeep and .gitignore and all the valid stuff 
+
+i have genrated a gitignore file via https://mrkandreev.name/snippets/gitignore-generator/#Node
+
+dev dependicies  tThese are packages needed only for development purposes, such as testing, transpiling, or linting installed nodemon 
+dependicies : These are the core packages your project needs to run in production. 

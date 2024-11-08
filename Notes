@@ -28,3 +28,6 @@ Requiring to pacakges dotenv beacuse of env variables connection and mongooes ex
 database ke liye 2 things to keep in mind
 1> its imp to keep things in try and catch or else promises when ever talking with database
 2> database is always in another continent so use which require time and for this we should use asynac and  await  
+
+08
+code setup and custom error classes , a little bit of middle ware, custom api classes\

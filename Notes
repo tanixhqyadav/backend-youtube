@@ -31,3 +31,53 @@ database ke liye 2 things to keep in mind
 
 08
 code setup and custom error classes , a little bit of middle ware, custom api classes\
+in Express we majorly changes works on request and response 
+url se jab koi data ata hai toh use req.params, req.body : alag alaga trh se data aa skta hai forms , json , 
+pacakage : cookie parser    , and cors
+app.use() is used while using middleware setting or else doing confriguation stuff 
+cors stands for Cross origin resource sharing 
+data comes with many things url , json , form which require some setting to configure data
+url has its encoder to encode the special character
+
+cookies are the small chunks of data , which are stored , updated or deleted , maintained while  browsing website
+When you visit a website, it may store a cookie on your device containing information like your login status or preferences. When you revisit the site, your browser sends this cookie back to the server,
+
+Middleware in Express (and other web frameworks) acts as a “gate” or checkpoint in the request-response cycle. It intercepts incoming HTTP requests before they reach the main route handlers, allowing you to add checks, transformations, or modifications to the request., we can use multiple middle ware
+it comprises of (err, req, res, next) next is about middleware, it is like a flag or else we can switch between middle ware 
+
+we need to talk with the database always two thing in mind(async awiat and try catch) , so what we can do , we can make it util , a genrilsed function for that  i am making a async handler in utlis 
+
+res.status(code) sets the response status code and then allows you to chain other methods, like res.json() or res.send(), to send the response data to the client.
+!server has some status code 
+Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+Here are some common status codes:
+
+200 - OK: Indicates that the request was successful.
+201 - Created: Used when a new resource has been created successfully, like after a POST request.
+400 - Bad Request: Sent when there’s an issue with the client’s request, like invalid input.
+401 - Unauthorized: Indicates that authentication is needed or failed.
+404 - Not Found: Used when the requested resource doesn’t exist on the server.
+500 - Internal Server Error: Signifies a server-side error
+
+.next() via eaxmple
+app.use((req, res, next) => {
+    console.log('First middleware');
+    next(); // move to the next middleware
+});
+
+app.use((req, res, next) => {
+    console.log('Second middleware');
+    next(); // move to the next middleware
+});
+
+app.get('/', (req, res) => {
+    res.send('Hello, world!'); // sends the response, ending the cycle
+}); next() is used to pass control from one middleware to the next
+
+Now for standarding error  node js provides a class error so we are overriding eror and controls in utils to handle all the error 
+in a standard way with status code, message etc....
+

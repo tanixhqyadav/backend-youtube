@@ -82,3 +82,42 @@ Now for standarding error  node js provides a class error so we are overriding e
 in a standard way with status code, message etc....
 same done for Api response
 
+09 data modeling ,user model , daily pulgin  in video model, JWT (javascript web Tokens) ,becript , 
+
+data in mongodb is stored in BSON format , (B json ) B stands for binary which allows it to handle complex, hierarchical data structures, here in user model , avtar and image url are stored on a third party service ,
+history is tracked jese he we will watch video toh video ki array mein push kar denge video , 
+
+JWT (JSON Web Token) and refresh tokens are commonly used for user authentication and session management.
+JSON Web Tokens (JWTs) are a compact, URL-safe way of securely transmitting information between parties as a JSON object. They’re often used for authentication and authorization in web applications, allowing the backend to verify that a user is authenticated without storing session data.
+// !JWTs have three parts: Header, Payload, and Signature. The payload contains the user claims, while the 
+// !signature verifies the token’s authenticity.
+Usage: Once a user logs in, the server generates a JWT and sends it back to the client. This token is stored on the client side (e.g., in local storage or a cookie). For subsequent requests, the client includes the JWT in the headers (often as a Bearer token in the Authorization header), allowing the server to verify the user’s identity without re-authenticating.
+
+refresh token  :A refresh token is a long-lived token that is used to obtain a new JWT when the original JWT expires.
+Usage: Since JWTs are usually short-lived (for security), they expire relatively quickly (e.g., in 15-30 minutes). When a JWT expires, the user would typically be logged out unless there’s a way to refresh the session. This is where the refresh token comes in. It’s stored securely and sent to the backend to generate a new JWT without requiring the user to re-authenticate.
+
+!!! to maintain watch history is not a easy task, so we are diiffrent package to work like moongos . aggragate . paginative-v2
+Mongoose's aggregate framework provides a powerful way to perform data aggregation operations directly on MongoDB collections. The aggregation framework allows for complex data manipulations, transformations, and computations on your MongoDB documents, beyond simple find and filter queries. In Mongoose, it can be used with the .aggregate() method to execute MongoDB aggregation pipelines.
+ const result = await Order.aggregate([
+  { $match: { status: "completed" } }, // Filters for completed orders
+  { $group: { _id: "$category", totalAmount: { $sum: "$amount" } } }, // Groups by category and calculates total amount
+  { $sort: { totalAmount: -1 } } // Sorts by total amount in descending order
+]);
+Filters only documents with "completed" status.
+Groups them by the category field and calculates the total of amount.
+Sorts the categories by totalAmount in descending order.
+a use of in above
+plugin :
+A Mongoose plugin is essentially a reusable piece of code that can be applied to one or more Mongoose schemas to add specific functionalities or behaviors. Plugins help in maintaining DRY (Don't Repeat Yourself) principles by allowing you to abstract and reuse common schema features across different models.
+
+more pacakages
+bcrypt or brcyptjs and jwt
+bcrypt is used for hashing the password , is a security technique used to protect passwords by converting them into a fixed-length string of characters (known as a "hash") that is unique to the original password
+
+Direct enryption is not possible so we need some mongoose hooks for this purpose 
+a pre-hook is a type of middleware that allows you to run specific functions before certain actions, such as saving, updating, or deleting documents in a collection
+Basically concpet that is ki hum log sessin krte hai means we use webiste , and then jwt are shortlived or else can be said 
+as temp variable which are used for authrization pasword checking nad these stuff , where else  the refresh tokens are 
+used for long sesion reauth and session managment these are stored in database
+
+

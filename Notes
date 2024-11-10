@@ -120,4 +120,32 @@ Basically concpet that is ki hum log sessin krte hai means we use webiste , and 
 as temp variable which are used for authrization pasword checking nad these stuff , where else  the refresh tokens are 
 used for long sesion reauth and session managment these are stored in database
 
+10 file upload and multer 
+express does not have file handling capablities , we need to configure mltiple things and most of the time filehandling 
+is not done on our own server it done on 3rd party api and server 
+file upload is basically a utility function and same concept is used in image uplo, ,video, pdf, etc....
 
+here we are using a service Cloudniary when ever we upload file 2 packages are used  multer or express file upload
+what cloudinary do ,it takes the file from user and upload it to its service 
+what we are doing here is we are uploading file through multer we will temproarliy keep the file to our local server, and then 
+by using cloudinary we will take the file from local server and kep that file  to servide 
+in proudction we also the above pratise to if any problem arise then for reupoad 
+fs is node js file system which comes by default and allow to perform many funcanalities including crud
+we are using multer and making fileupload  middleware   
+what is actually done 
+
+Local Upload:
+
+The multer middleware saves the uploaded file temporarily in a local directory (./public/temp) on the server.
+This directory serves as a temporary storage location, ensuring the file is accessible while the backend prepares to upload it to Cloudinary.
+Cloudinary Upload:
+
+The uploadOnCloudinary function takes the local file path as input and uses Cloudinary’s API to upload the file.
+Cloudinary’s resource_type: "auto" option lets it auto-detect the type of file (e.g., image, video, etc.).
+File Removal:
+
+After successfully uploading the file to Cloudinary, the fs.unlinkSync method deletes the local file to save space and improve security.
+If an error occurs during the Cloudinary upload, the catch block also removes the file to prevent any leftover temporary files on the server.
+Returning the Cloudinary Response:
+
+Once the file is on Cloudinary, the function returns the response, which includes details such as the file URL on Cloudinary.

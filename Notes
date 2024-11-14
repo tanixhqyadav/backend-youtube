@@ -6,7 +6,7 @@ setting up my project with github for further better with .gitkeep and .gitignor
 
 i have genrated a gitignore file via https://mrkandreev.name/snippets/gitignore-generator/#Node
 
-dev dependicies  tThese are packages needed only for development purposes, such as testing, transpiling, or linting installed nodemon 
+dev dependicies  These are packages needed only for development purposes, such as testing, transpiling, or linting installed nodemon 
 dependicies : These are the core packages your project needs to run in production. 
 some of the folders created such as in src
 *controllers this folder will have funcanilities
@@ -149,3 +149,14 @@ If an error occurs during the Cloudinary upload, the catch block also removes th
 Returning the Cloudinary Response:
 
 Once the file is on Cloudinary, the function returns the response, which includes details such as the file URL on Cloudinary.
+
+11
+HTTP HYPER TEXT TRANSFER PROTOCOL 
+THE DIFFRENCE BETWEEEN http and https is all anout security concern https is more secure the data sent in encrypted way 
+URL URI URN ALL ARE SAME BUT names are given  UNIFORM RESOURCE LOCATOR 
+http headers is the data about the data which is called metadata, it is basically keyvalue pair with request and response both 
+it is used for caching , authentication , state management
+request header > client 
+response header > server
+represantation header> encoding 
+payload headers>data

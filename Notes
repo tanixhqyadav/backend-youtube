@@ -156,7 +156,111 @@ THE DIFFRENCE BETWEEEN http and https is all anout security concern https is mor
 URL URI URN ALL ARE SAME BUT names are given  UNIFORM RESOURCE LOCATOR 
 http headers is the data about the data which is called metadata, it is basically keyvalue pair with request and response both 
 it is used for caching , authentication , state management
-request header > client 
+request header > client  
 response header > server
 represantation header> encoding 
 payload headers>data
+
+https methods 
+>Get : retrive a resource 
+>Head: no message body
+>Options:what options are avialable 
+>Trace:loop back test
+>Delete: remove a resource 
+>Put: replace a resource 
+>Post: intreact with resource 
+>Patch: change part of a resource 
+ HTTPS (or HTTP over SSL/TLS) is a fundamental protocol that ensures secure communication between the frontend and backend. It plays a critical role in protecting data integrity, confidentiality, and authenticity. HTTP methods like GET, POST, DELETE, PATCH, PUT, TRACE, and OPTIONS are essential tools for interacting with resources on a server. Here's a breakdown:
+
+HTTPS as a Communication Layer:
+
+HTTPS ensures secure data exchange by encrypting the communication using SSL/TLS. This prevents sensitive data like user credentials or API keys from being intercepted.
+HTTP Methods for Interaction:
+
+GET: Retrieve data from the server (e.g., fetching user details).
+POST: Send data to the server to create a new resource (e.g., submitting a form).
+PUT: Update an entire resource on the server.
+PATCH: Update a part of a resource on the server.
+DELETE: Remove a resource from the server.
+OPTIONS: Check which HTTP methods are supported by the server.
+TRACE: Debug and trace the route a request takes to the server.
+HTTP Headers:
+
+Headers like Content-Type, Authorization, Accept, and User-Agent facilitate communication by providing metadata about the request or response.
+Front-End and Back-End Communication:
+
+The frontend (client-side) sends HTTP requests to interact with the backend (server-side), which processes these requests and sends back responses, often in formats like JSON or XML.
+A REST API (Representational State Transfer Application Programming Interface) is a set of rules and conventions for building and interacting with web services. REST is a widely used architectural style that allows communication between a client (frontend) and a server (backend) over HTTP, using standard methods like GET, POST, PUT, DELETE, and others.
+
+A REST API (Representational State Transfer Application Programming Interface) is a set of rules and conventions for building and interacting with web services. REST is a widely used architectural style that allows communication between a client (frontend) and a server (backend) over HTTP, using standard methods like GET, POST, PUT, DELETE, and others.
+
+Key Concepts of REST API:
+Resource-Based Architecture:
+
+In REST, everything is a resource. Resources are typically represented by URLs (Uniform Resource Locators).
+Example:
+/users – Represents a collection of users.
+/users/123 – Represents a specific user with ID 123.
+Stateless Communication:
+
+Each request from the client to the server must contain all the information the server needs to fulfill it. The server does not retain any session information about the client between requests.
+HTTP Methods: RESTful APIs use standard HTTP methods to perform operations on resources:
+
+GET: Retrieve a resource.
+POST: Create a new resource.
+PUT: Update an existing resource entirely.
+PATCH: Update part of a resource.
+DELETE: Remove a resource.
+HTTP Status Codes: REST APIs use standard HTTP status codes to indicate the result of a request:
+
+200 OK – Request was successful.
+201 Created – A resource was successfully created.
+400 Bad Request – The client sent an invalid request.
+401 Unauthorized – Authentication is required.
+404 Not Found – The requested resource does not exist.
+500 Internal Server Error – The server encountered an error.
+Representation of Resources:
+
+Resources are typically represented in a format like JSON, XML, or even plain text.
+Example of JSON response for a user resource:
+json
+Copy code
+{
+  "id": 123,
+  "name": "John Doe",
+  "email": "johndoe@example.com"
+}
+Uniform Interface:
+
+REST APIs adhere to a uniform set of rules for how resources are defined and accessed, making it easier to work with different APIs.
+Benefits of REST APIs:
+Scalability: Statelessness allows REST APIs to scale easily.
+Flexibility: Works with multiple data formats (JSON, XML, etc.).
+Interoperability: REST APIs can be used across various platforms and programming languages.
+Simplicity: REST is easy to understand and implement.
+How REST APIs Work:
+The client (e.g., a frontend application) sends an HTTP request to the server.
+The server processes the request and interacts with a database or service to fetch or manipulate data.
+The server sends an HTTP response back to the client, often including data in JSON or XML format.
+Example:
+Request:
+
+http
+Copy code
+GET /users/123 HTTP/1.1
+Host: api.example.com
+Accept: application/json
+Response:
+
+json
+Copy code
+{
+  "id": 123,
+  "name": "John Doe",
+  "email": "johndoe@example.com"
+}
+
+How REST APIs Work:
+The client (e.g., a frontend application) sends an HTTP request to the server.
+The server processes the request and interacts with a database or service to fetch or manipulate data.
+The server sends an HTTP response back to the client, often including data in JSON or XML format.

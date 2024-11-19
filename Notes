@@ -264,3 +264,9 @@ How REST APIs Work:
 The client (e.g., a frontend application) sends an HTTP request to the server.
 The server processes the request and interacts with a database or service to fetch or manipulate data.
 The server sends an HTTP response back to the client, often including data in JSON or XML format.
+
+
+12
+logic building and register ?? Controller and logics 
+here we are writing logics and controller part , now we are writing logic as written in register in controller and now
+we are creating routes 

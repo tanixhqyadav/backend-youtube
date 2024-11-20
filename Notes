@@ -269,4 +269,9 @@ The server sends an HTTP response back to the client, often including data in JS
 12
 logic building and register ?? Controller and logics 
 here we are writing logics and controller part , now we are writing logic as written in register in controller and now
-we are creating routes 
+we are creating routes when we hit the url then method should run 
+we can do that while hitting the register user we can hit that route but what we do generally is that we declare routes
+, we can use app.get in writing register route but we are using middle ware to write routes and routers   
+we can use a plugin of vs code thunder client for better 
+Postman and Thunder Client are both tools commonly used for testing and interacting with APIs (Application Programming Interfaces).
+use postman for api checking and routes 

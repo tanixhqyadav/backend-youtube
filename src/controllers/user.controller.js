@@ -7,7 +7,9 @@ import {asyncHandler} from "../utils/asyncHandler.js"
 // errors in the function. This helps prevent the need to manually handle try...catch for every async function.
 const registerUser=asyncHandler( async (req, res) =>{
     // registerUser function is responsible for handling the request, but in this case, it just sends a response with a success message.
-    res.status(200).json({
+    return res.status(200).json({
         message:"ok"
     })
 })
+
+export {registerUser} 
